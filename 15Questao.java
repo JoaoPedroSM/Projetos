@@ -12,7 +12,7 @@ public class CopiarArquivo {
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(arquivoOrigem));
              BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(arquivoDestino))) {
 
-            byte[] buffer = new byte[8192]; // Buffer de 8KB (pode ajustar o tamanho conforme necessário)
+            byte[] buffer = new byte[8192]; 
             int bytesLidos;
             while ((bytesLidos = in.read(buffer)) != -1) {
                 out.write(buffer, 0, bytesLidos);
