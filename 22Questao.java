@@ -21,20 +21,20 @@ public class AtualizarProdutosCSV {
             System.out.println("Produtos disponíveis para atualização:");
             for (int i = 1; i < linhas.size(); i++) {
                 String[] produto = linhas.get(i);
-                System.out.println(i + ". " + produto[0]); // Nome do produto
+                System.out.println(i + ". " + produto[0]); 
             }
 
             System.out.print("\nDigite o número do produto que deseja atualizar: ");
-            int numeroProduto = Integer.parseInt(scanner.nextLine()) - 1; // Ajustar para índice da lista
+            int numeroProduto = Integer.parseInt(scanner.nextLine()) - 1; 
 
             if (numeroProduto < 0 || numeroProduto >= linhas.size() - 1) {
                 System.out.println("Número de produto inválido.");
                 return;
             }
 
-            String[] produtoSelecionado = linhas.get(numeroProduto + 1); // Ignorar cabeçalho
+            String[] produtoSelecionado = linhas.get(numeroProduto + 1); 
 
-            System.out.println("\nProduto selecionado: " + produtoSelecionado[0]); // Nome do produto
+            System.out.println("\nProduto selecionado: " + produtoSelecionado[0]); 
             System.out.print("Novo preço (ou deixe em branco para manter o mesmo): ");
             String novoPrecoStr = scanner.nextLine();
             double novoPreco = novoPrecoStr.isEmpty() ? Double.parseDouble(produtoSelecionado[1]) : Double.parseDouble(novoPrecoStr);
@@ -42,11 +42,11 @@ public class AtualizarProdutosCSV {
             String novaQuantidadeStr = scanner.nextLine();
             int novaQuantidade = novaQuantidadeStr.isEmpty() ? Integer.parseInt(produtoSelecionado[2]) : Integer.parseInt(novaQuantidadeStr);
 
-            // Atualizar as informações do produto selecionado
+        
             produtoSelecionado[1] = Double.toString(novoPreco);
             produtoSelecionado[2] = Integer.toString(novaQuantidade);
 
-            // Escrever as linhas atualizadas no arquivo CSV temporário
+         
             writer.writeAll(linhas);
 
             System.out.println("Produto atualizado com sucesso.");
