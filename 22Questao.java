@@ -17,7 +17,7 @@ public class AtualizarProdutosCSV {
             Scanner scanner = new Scanner(System.in);
             List<String[]> linhas = reader.readAll();
 
-            // Exibir produtos disponíveis para atualização
+     
             System.out.println("Produtos disponíveis para atualização:");
             for (int i = 1; i < linhas.size(); i++) {
                 String[] produto = linhas.get(i);
@@ -25,7 +25,7 @@ public class AtualizarProdutosCSV {
             }
 
             System.out.print("\nDigite o número do produto que deseja atualizar: ");
-            int numeroProduto = Integer.parseInt(scanner.nextLine()) - 1; 
+            int numeroProduto = Integer.parseInt(scanner.nextLine()) - 1;
 
             if (numeroProduto < 0 || numeroProduto >= linhas.size() - 1) {
                 System.out.println("Número de produto inválido.");
