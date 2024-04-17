@@ -11,12 +11,12 @@ public class EscreverProdutosCSV {
         try (CSVWriter writer = new CSVWriter(new FileWriter(arquivoCSV, true))) {
             Scanner scanner = new Scanner(System.in);
 
-            // Solicitar detalhes dos produtos e escrever no arquivo CSV
+         
             while (true) {
                 System.out.println("\nAdicionar produto:");
                 System.out.print("Nome: ");
                 String nome = scanner.nextLine();
-                if (nome.isEmpty()) break; // Se o nome estiver vazio, terminar o loop
+                if (nome.isEmpty()) break; 
                 System.out.print("Preço: ");
                 double preco = Double.parseDouble(scanner.nextLine());
                 System.out.print("Quantidade: ");
