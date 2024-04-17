@@ -20,21 +20,21 @@ public class OrdenarLinhas {
                 linhas.add(linha);
             }
             Collections.sort(linhas);
+            escreverArquivo(arquivoSaida, linhas);
+            System.out.println("Linhas ordenadas e salvas em '" + arquivoSaida + "'.");
         } catch (IOException e) {
             System.out.println("Erro ao processar o arquivo.");
             e.printStackTrace();
-            return;
         }
+    }
 
+    private static void escreverArquivo(String arquivoSaida, List<String> linhas) throws IOException {
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(arquivoSaida))) {
             for (String linha : linhas) {
                 escritor.write(linha);
                 escritor.newLine();
             }
-            System.out.println("Linhas ordenadas e salvas em '" + arquivoSaida + "'.");
-        } catch (IOException e) {
-            System.out.println("Erro ao escrever no arquivo.");
-            e.printStackTrace();
         }
     }
 }
+
