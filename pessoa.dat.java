@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class App {
+public class pessoa.dat {
 
     static class Pessoa implements Serializable {
         private String nome;
