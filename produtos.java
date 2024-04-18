@@ -27,7 +27,7 @@ class Produto implements Serializable {
     }
 }
 
-public class App {
+public class produtos {
 
     public static void main(String[] args) {
         List<Produto> listaProdutos = Arrays.asList(
