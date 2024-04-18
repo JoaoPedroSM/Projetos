@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class aa {
+public class meuarquivo_python {
     public static void main(String[] args) {
         String arquivoEntrada = "meuarquivo.txt";
         String arquivoSaida = "meuarquivo_python.txt";
