@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class meuarquivo 
+public class meuarquivosadicao 
 {
     public static void main( String[] args ){
     String meuarquivo = "meuarquivo.txt";
